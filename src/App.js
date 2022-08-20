@@ -1,11 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Menu from "../src/Components/Header/Menu.jsx";
+import { Routes, Route, } from "react-router-dom";
+import Home from "./Components/Header/Home.js";
+import { AnimatePresence } from "framer-motion";
 function App() {
   return (
-    <div className="App">
-     <div className="w-screen h-screen flex items-center justify-center text-blue-600">Our App</div>  
-    </div>
+    <AnimatePresence>
+      <div className="w-screen h-auto flex flex-col bg-slate-200">
+        <Menu></Menu>
+        <main className="mt-24 p-8 w-full">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            {/* <Route path="about" element={<About />} /> */}
+          </Routes>
+        </main>
+      </div>
+    </AnimatePresence>
   );
 }
 
