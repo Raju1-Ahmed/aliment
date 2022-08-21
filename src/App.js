@@ -4,7 +4,7 @@ import Home from "./Components/Header/Home.js";
 import { AnimatePresence } from "framer-motion";
 function App() {
   return (
-    <AnimatePresence>
+    <AnimatePresence exitBeforeEnter>
       <div className="w-screen h-auto flex flex-col bg-slate-200">
         <Menu></Menu>
         <main className="mt-24 p-8 w-full">
